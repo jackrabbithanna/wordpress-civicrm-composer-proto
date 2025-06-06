@@ -64,6 +64,7 @@ foreach ($linkMappings as $source => $target) {
 
 
 // 3. Remove default WordPress plugins
+/*
 echo "Removing default WordPress plugins and themes..." . PHP_EOL;
 // Ultra-simple version using system command
 function removeItem($path) {
@@ -76,3 +77,4 @@ removeItem($defaultPluginsDir . '/akismet');
 removeItem($defaultThemesDir . '/twentytwentyfive');
 removeItem($defaultThemesDir . '/twentytwentyfour');
 removeItem($defaultThemesDir . '/twentytwentythree');
+*/
