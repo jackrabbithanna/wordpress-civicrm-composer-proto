@@ -18,11 +18,11 @@ Install Wordpress as normal
 
 copy ./wp-config.bak to ./wp-config.php
 
-Remove ./web/wp-config.php after login so that ./wp-config.php takes over
+Remove ./web/wp-config.php after WP install so that ./wp-config.php takes over
 
 Install CiviCRM as normal
 
-copy ./web/wp-content/uploads/civicrm/civicrm.settings.bak to civicrm.settings.php
+copy ./web/wp-content/uploads/civicrm/civicrm.settings.bak to civicrm.settings.php, replacing what the installer put in place.
 
 Now both wp-config.php and civicrm.settings.php are the originals from this repo, using the environmental variables in the .env
 
