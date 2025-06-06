@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f28841525601c4ed6d7358b995a0cb32",
+    "content-hash": "46f7116161846d0d3e50d832c8f8a8a6",
     "packages": [
         {
             "name": "adrienrn/php-mimetyper",
@@ -231,53 +231,55 @@
         },
         {
             "name": "civicrm/civicrm-core",
-            "version": "5.81.2",
+            "version": "6.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/civicrm/civicrm-core.git",
-                "reference": "544a78542907f651c7694c6791c547a8b275ccf1"
+                "reference": "0667dcc3ea3a45bb40e1b7d7c18d2490a6f677df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/civicrm/civicrm-core/zipball/544a78542907f651c7694c6791c547a8b275ccf1",
-                "reference": "544a78542907f651c7694c6791c547a8b275ccf1",
+                "url": "https://api.github.com/repos/civicrm/civicrm-core/zipball/0667dcc3ea3a45bb40e1b7d7c18d2490a6f677df",
+                "reference": "0667dcc3ea3a45bb40e1b7d7c18d2490a6f677df",
                 "shasum": ""
             },
             "require": {
                 "adrienrn/php-mimetyper": "0.2.2",
                 "behat/mink": "^1.10",
                 "brick/money": "~0.5",
-                "civicrm/civicrm-cxn-rpc": "~0.20.12.01 || ~0.19.01.10",
                 "civicrm/composer-compile-lib": "~0.6 || ~1.0",
                 "civicrm/composer-downloads-plugin": "^3.0 || ^4.0",
                 "composer-runtime-api": "~2.0",
                 "cweagans/composer-patches": "~1.0",
                 "dmore/chrome-mink-driver": "^2.9",
-                "dompdf/dompdf": "~2.0.4",
+                "dompdf/dompdf": "~2.0.4|| ~3.0",
                 "ext-fileinfo": "*",
                 "ext-intl": "*",
                 "ext-json": "*",
+                "ext-mbstring": "*",
+                "ext-mysqli": "*",
                 "ezyang/htmlpurifier": "^4.13",
                 "firebase/php-jwt": ">=3 <7",
                 "guzzlehttp/guzzle": "^6.3 || ^7.3",
                 "guzzlehttp/psr7": "^1.9 || ^2.0",
                 "knplabs/knp-snappy": "^1.4",
                 "laravel/serializable-closure": "^1.3",
-                "league/csv": "~9.7.4",
-                "league/oauth2-client": "^2.4",
-                "league/oauth2-google": "^3.0 || ^4.0",
+                "league/csv": "^9.8.0",
+                "league/oauth2-client": "^2.8",
+                "league/oauth2-google": "^4.0",
                 "marcj/topsort": "~1.1",
                 "pear/auth_sasl": "1.2.0",
                 "pear/db": "~1.12.1",
-                "pear/log": "1.14.4",
+                "pear/log": "1.14.5",
                 "pear/mail": "^2.0",
                 "pear/mail_mime": "~1.10",
                 "pear/net_smtp": "1.12.*",
                 "pear/net_socket": "1.2.1",
                 "pear/validate_finance_creditcard": "0.7.0",
-                "php": "~7.4 || ~8",
+                "php": "~8.0",
                 "phpoffice/phpspreadsheet": "^1.18 || ^2",
-                "phpoffice/phpword": "^1.2",
+                "phpoffice/phpword": "^1.4",
+                "phpseclib/phpseclib": "~2.0",
                 "pontedilana/php-weasyprint": "^0.13.0 || ^1",
                 "psr/container": "~1.0 || ~2.0",
                 "psr/log": "~1.0 || ~2.0 || ~3.0",
@@ -293,13 +295,15 @@
                 "symfony/polyfill-php80": "^1.0",
                 "symfony/polyfill-php81": "^1.0",
                 "symfony/polyfill-php82": "^1.0",
+                "symfony/polyfill-php83": "^1.0",
+                "symfony/polyfill-php84": "^1.0",
                 "symfony/process": "~4.4 ||  ~5.4 || ~5.0 || ~6.0 || ~7.0",
                 "symfony/service-contracts": "~2.2 || ~3.1",
                 "symfony/var-dumper": "~4.4 || ~5.1 || ~6.0 || ~7.0",
                 "tecnickcom/tcpdf": "6.*",
                 "totten/ca-config": "~23.07",
                 "tplaner/when": "~3.1",
-                "typo3/phar-stream-wrapper": "^2 || ^3.0",
+                "typo3/phar-stream-wrapper": "^3.0 || ^4.0",
                 "xkerman/restricted-unserialize": "~1.1",
                 "zetacomponents/base": "1.9.*",
                 "zetacomponents/mail": "~1.9.4"
@@ -308,24 +312,25 @@
             "extra": {
                 "patches": {
                     "pear/db": {
-                        "Apply CiviCRM Customisations for the pear:db package": "https://raw.githubusercontent.com/civicrm/civicrm-core/2ad420c394/tools/scripts/composer/pear_db_civicrm_changes.patch"
+                        "Apply CiviCRM Customisations for the pear:db package": "https://download.civicrm.org/patches/83a3d0dd9f8e555a474ee433c453ff741a4dedf1983bad8b3566136e90f9c46b/pear_db_civicrm_changes.patch",
+                        "Ensure that error messages about MySQL-SSL connections are reported": "https://download.civicrm.org/patches/a6e31a769218801fb1fb3d679ff72d3d8a7c5637d3bb7b78680cd7809552e0c6/mysqli-ssl.patch"
                     },
                     "pear/mail": {
-                        "Apply CiviCRM Customisations for CRM-1367 and CRM-5946": "https://raw.githubusercontent.com/civicrm/civicrm-core/36319938a5bf26c1e7e2110a26a65db6a5979268/tools/scripts/composer/patches/pear-mail.patch"
+                        "Apply CiviCRM Customisations for CRM-1367 and CRM-5946": "https://download.civicrm.org/patches/00da3cfcfe0d24420665f3015a5d3ea72dc331a52636f009883892ed3c7fbf84/pear-mail.patch"
                     },
                     "pear/net_smtp": {
-                        "Add in CiviCRM custom error message for CRM-8744": "https://raw.githubusercontent.com/civicrm/civicrm-core/a6a0ff13d2a155ad962529595dceaef728116f96/tools/scripts/composer/patches/net-smtp-patch.patch"
+                        "Add in CiviCRM custom error message for CRM-8744": "https://download.civicrm.org/patches/ee02d81d09432e524b249c9d874c9756b88924df8f5a8d69b19e8b4d6f532327/error-msg.patch"
                     },
                     "pear/mail_mime": {
-                        "Apply patch for CRM-3133 wordwrap body to be 750 characters to apply with RFC 2821": "https://raw.githubusercontent.com/civicrm/civicrm-core/74e25f27bb3be32519657539afe8a285c6c99a08/tools/scripts/composer/patches/mail_mime_crm_3133.patch"
+                        "Apply patch for CRM-3133 wordwrap body to be 750 characters to apply with RFC 2821": "https://download.civicrm.org/patches/38231167f0c789e0b368b38c1499973d562de65e87094b402156a6b928cc4c38/crm_3133.patch"
                     },
                     "zetacomponents/mail": {
-                        "CiviCRM Custom Patches for ZetaCompoents mail": "https://raw.githubusercontent.com/civicrm/civicrm-core/9d93748a36c7c5d44422911db1c98fb2f7067b34/tools/scripts/composer/patches/civicrm-custom-patches-zetacompoents-mail.patch",
-                        "CiviCRM Custom patch to fix a php8.1 issue found in CiviCRM unit tests": "https://raw.githubusercontent.com/civicrm/civicrm-core/5506f4ce5d46799857b4f4ddf34069e7541e9cc5/tools/scripts/composer/zetacomponents-php-81-civicrm-custom.patch"
+                        "CiviCRM Custom Patches for ZetaCompoents mail": "https://download.civicrm.org/patches/6e4bd36dd432a1e62830b0c757a3bac9645ea1cfc551db39798a88c06d66aaf3/100-filename.patch",
+                        "CiviCRM Custom patch to fix a php8.1 issue found in CiviCRM unit tests": "https://download.civicrm.org/patches/d187bcd1100b99529705cdd61193efa683951f6cfbc97ecaa69bc6cd601d2e5f/200-php-81.patch"
                     },
                     "adrienrn/php-mimetyper": {
-                        "Apply patch to fix php8.2 deprecation notice on dynamic property $filename": "https://patch-diff.githubusercontent.com/raw/adrienrn/php-mimetyper/pull/17.patch",
-                        "Update gitignore to ensure that sites that manage via git don't miss out on the important db.json file": "https://patch-diff.githubusercontent.com/raw/adrienrn/php-mimetyper/pull/15.patch"
+                        "Apply patch to fix php8.2 deprecation notice on dynamic property $filename": "https://download.civicrm.org/patches/011c5f09dc27b260937380f7a9ef5ad1fa713ae206b0b66ce03decc1932fc3f6/17.patch",
+                        "Update gitignore to ensure that sites that manage via git don't miss out on the important db.json file": "https://download.civicrm.org/patches/ffb6c65c6caa0a8a648f167f8800072d50ca0e4138002c52c05065be0ae60a63/15.patch"
                     }
                 },
                 "downloads": {
@@ -450,6 +455,10 @@
                             "*.md"
                         ]
                     },
+                    "js-spark-md5": {
+                        "url": "https://github.com/satazor/js-spark-md5/archive/refs/tags/{$version}.zip",
+                        "version": "v3.0.2"
+                    },
                     "angular-mocks": {
                         "url": "https://github.com/angular/bower-angular-mocks/archive/v1.8.0.zip"
                     },
@@ -472,7 +481,9 @@
                         "path": "bower_components/monaco-editor",
                         "ignore": [
                             "dev",
-                            "esm"
+                            "esm",
+                            "min-maps",
+                            "min/vs/language/typescript"
                         ]
                     },
                     "json-formatter": {
@@ -664,9 +675,10 @@
                     }
                 },
                 "compile-includes": [
+                    "composer.compile.json",
                     "ext/greenwich/composer.compile.json"
                 ],
-                "patches-comments": "For information about defining patches via composer.json, see https://docs.civicrm.org/dev/en/latest/core/dependencies/",
+                "patches-comments": "For information about defining patches via composer.json, see ./tools/patches/README.md and https://docs.civicrm.org/dev/en/latest/core/dependencies/",
                 "compile-whitelist": [
                     "civicrm/composer-compile-lib"
                 ]
@@ -724,7 +736,7 @@
             ],
             "description": "Open source constituent relationship management for non-profits, NGOs and advocacy organizations.",
             "support": {
-                "source": "https://github.com/civicrm/civicrm-core/tree/5.81.2"
+                "source": "https://github.com/civicrm/civicrm-core/tree/6.3.1"
             },
             "funding": [
                 {
@@ -732,48 +744,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2025-02-06T09:33:01+00:00"
-        },
-        {
-            "name": "civicrm/civicrm-cxn-rpc",
-            "version": "v0.20.12.02",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/civicrm/civicrm-cxn-rpc.git",
-                "reference": "72ae98b79f04048ed03c4325b5fa4ad501bcec59"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/civicrm/civicrm-cxn-rpc/zipball/72ae98b79f04048ed03c4325b5fa4ad501bcec59",
-                "reference": "72ae98b79f04048ed03c4325b5fa4ad501bcec59",
-                "shasum": ""
-            },
-            "require": {
-                "phpseclib/phpseclib": "~2.0",
-                "psr/log": "~1.1 || ~2.0 || ~3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Civi\\Cxn\\Rpc\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Tim Otten",
-                    "email": "totten@civicrm.org"
-                }
-            ],
-            "description": "RPC library for CiviConnect",
-            "support": {
-                "issues": "https://github.com/civicrm/civicrm-cxn-rpc/issues",
-                "source": "https://github.com/civicrm/civicrm-cxn-rpc/tree/v0.20.12.02"
-            },
-            "time": "2022-05-10T22:59:48+00:00"
+            "time": "2025-06-05T23:25:04+00:00"
         },
         {
             "name": "civicrm/civicrm-extension-plugin",
@@ -843,25 +814,25 @@
         },
         {
             "name": "civicrm/civicrm-packages",
-            "version": "5.81.2",
+            "version": "6.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/civicrm/civicrm-packages.git",
-                "reference": "cc16b150804725da46431b1001bb02bc461a714f"
+                "reference": "b70bdb81778f3643b66869c483191870134bf2e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/civicrm/civicrm-packages/zipball/cc16b150804725da46431b1001bb02bc461a714f",
-                "reference": "cc16b150804725da46431b1001bb02bc461a714f",
+                "url": "https://api.github.com/repos/civicrm/civicrm-packages/zipball/b70bdb81778f3643b66869c483191870134bf2e9",
+                "reference": "b70bdb81778f3643b66869c483191870134bf2e9",
                 "shasum": ""
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
             "description": "Legacy third party dependencies for CiviCRM",
             "support": {
-                "source": "https://github.com/civicrm/civicrm-packages/tree/5.81.2"
+                "source": "https://github.com/civicrm/civicrm-packages/tree/6.3.1"
             },
-            "time": "2024-09-19T13:11:56+00:00"
+            "time": "2025-05-06T23:52:17+00:00"
         },
         {
             "name": "civicrm/civicrm-wordpress",
@@ -1515,32 +1486,34 @@
         },
         {
             "name": "dompdf/dompdf",
-            "version": "v2.0.8",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dompdf/dompdf.git",
-                "reference": "c20247574601700e1f7c8dab39310fca1964dc52"
+                "reference": "a51bd7a063a65499446919286fb18b518177155a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/c20247574601700e1f7c8dab39310fca1964dc52",
-                "reference": "c20247574601700e1f7c8dab39310fca1964dc52",
+                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/a51bd7a063a65499446919286fb18b518177155a",
+                "reference": "a51bd7a063a65499446919286fb18b518177155a",
                 "shasum": ""
             },
             "require": {
+                "dompdf/php-font-lib": "^1.0.0",
+                "dompdf/php-svg-lib": "^1.0.0",
                 "ext-dom": "*",
                 "ext-mbstring": "*",
                 "masterminds/html5": "^2.0",
-                "phenx/php-font-lib": ">=0.5.4 <1.0.0",
-                "phenx/php-svg-lib": ">=0.5.2 <1.0.0",
                 "php": "^7.1 || ^8.0"
             },
             "require-dev": {
+                "ext-gd": "*",
                 "ext-json": "*",
                 "ext-zip": "*",
                 "mockery/mockery": "^1.3",
-                "phpunit/phpunit": "^7.5 || ^8 || ^9",
-                "squizlabs/php_codesniffer": "^3.5"
+                "phpunit/phpunit": "^7.5 || ^8 || ^9 || ^10 || ^11",
+                "squizlabs/php_codesniffer": "^3.5",
+                "symfony/process": "^4.4 || ^5.4 || ^6.2 || ^7.0"
             },
             "suggest": {
                 "ext-gd": "Needed to process images",
@@ -1571,9 +1544,100 @@
             "homepage": "https://github.com/dompdf/dompdf",
             "support": {
                 "issues": "https://github.com/dompdf/dompdf/issues",
-                "source": "https://github.com/dompdf/dompdf/tree/v2.0.8"
+                "source": "https://github.com/dompdf/dompdf/tree/v3.1.0"
             },
-            "time": "2024-04-29T13:06:17+00:00"
+            "time": "2025-01-15T14:09:04+00:00"
+        },
+        {
+            "name": "dompdf/php-font-lib",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dompdf/php-font-lib.git",
+                "reference": "6137b7d4232b7f16c882c75e4ca3991dbcf6fe2d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dompdf/php-font-lib/zipball/6137b7d4232b7f16c882c75e4ca3991dbcf6fe2d",
+                "reference": "6137b7d4232b7f16c882c75e4ca3991dbcf6fe2d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "^3 || ^4 || ^5 || ^6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FontLib\\": "src/FontLib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "The FontLib Community",
+                    "homepage": "https://github.com/dompdf/php-font-lib/blob/master/AUTHORS.md"
+                }
+            ],
+            "description": "A library to read, parse, export and make subsets of different types of font files.",
+            "homepage": "https://github.com/dompdf/php-font-lib",
+            "support": {
+                "issues": "https://github.com/dompdf/php-font-lib/issues",
+                "source": "https://github.com/dompdf/php-font-lib/tree/1.0.1"
+            },
+            "time": "2024-12-02T14:37:59+00:00"
+        },
+        {
+            "name": "dompdf/php-svg-lib",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dompdf/php-svg-lib.git",
+                "reference": "eb045e518185298eb6ff8d80d0d0c6b17aecd9af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dompdf/php-svg-lib/zipball/eb045e518185298eb6ff8d80d0d0c6b17aecd9af",
+                "reference": "eb045e518185298eb6ff8d80d0d0c6b17aecd9af",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": "^7.1 || ^8.0",
+                "sabberworm/php-css-parser": "^8.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Svg\\": "src/Svg"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "The SvgLib Community",
+                    "homepage": "https://github.com/dompdf/php-svg-lib/blob/master/AUTHORS.md"
+                }
+            ],
+            "description": "A library to read, parse and export to PDF SVG files.",
+            "homepage": "https://github.com/dompdf/php-svg-lib",
+            "support": {
+                "issues": "https://github.com/dompdf/php-svg-lib/issues",
+                "source": "https://github.com/dompdf/php-svg-lib/tree/1.0.0"
+            },
+            "time": "2024-04-29T13:26:35+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -2302,35 +2366,42 @@
         },
         {
             "name": "league/csv",
-            "version": "9.7.4",
+            "version": "9.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/csv.git",
-                "reference": "002f55f649e7511710dc7154ff44c7be32c8195c"
+                "reference": "774008ad8a634448e4f8e288905e070e8b317ff3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/csv/zipball/002f55f649e7511710dc7154ff44c7be32c8195c",
-                "reference": "002f55f649e7511710dc7154ff44c7be32c8195c",
+                "url": "https://api.github.com/repos/thephpleague/csv/zipball/774008ad8a634448e4f8e288905e070e8b317ff3",
+                "reference": "774008ad8a634448e4f8e288905e070e8b317ff3",
                 "shasum": ""
             },
             "require": {
-                "ext-json": "*",
-                "ext-mbstring": "*",
-                "php": "^7.3 || ^8.0"
+                "ext-filter": "*",
+                "php": "^8.1.2"
             },
             "require-dev": {
-                "ext-curl": "*",
                 "ext-dom": "*",
-                "friendsofphp/php-cs-fixer": "^3.0",
-                "phpstan/phpstan": "^1.0",
-                "phpstan/phpstan-phpunit": "^1.0.0",
-                "phpstan/phpstan-strict-rules": "^1.0",
-                "phpunit/phpunit": "^9.5"
+                "ext-xdebug": "*",
+                "friendsofphp/php-cs-fixer": "^3.69.0",
+                "phpbench/phpbench": "^1.4.0",
+                "phpstan/phpstan": "^1.12.18",
+                "phpstan/phpstan-deprecation-rules": "^1.2.1",
+                "phpstan/phpstan-phpunit": "^1.4.2",
+                "phpstan/phpstan-strict-rules": "^1.6.2",
+                "phpunit/phpunit": "^10.5.16 || ^11.5.7",
+                "symfony/var-dumper": "^6.4.8 || ^7.2.3"
             },
             "suggest": {
-                "ext-dom": "Required to use the XMLConverter and or the HTMLConverter classes",
-                "ext-iconv": "Needed to ease transcoding CSV using iconv stream filters"
+                "ext-dom": "Required to use the XMLConverter and the HTMLConverter classes",
+                "ext-iconv": "Needed to ease transcoding CSV using iconv stream filters",
+                "ext-mbstring": "Needed to ease transcoding CSV using mb stream filters",
+                "ext-mysqli": "Requiered to use the package with the MySQLi extension",
+                "ext-pdo": "Required to use the package with the PDO extension",
+                "ext-pgsql": "Requiered to use the package with the PgSQL extension",
+                "ext-sqlite3": "Required to use the package with the SQLite3 extension"
             },
             "type": "library",
             "extra": {
@@ -2359,7 +2430,7 @@
                 }
             ],
             "description": "CSV data manipulation made easy in PHP",
-            "homepage": "http://csv.thephpleague.com",
+            "homepage": "https://csv.thephpleague.com",
             "keywords": [
                 "convert",
                 "csv",
@@ -2382,7 +2453,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-11-30T07:09:34+00:00"
+            "time": "2025-03-28T06:52:04+00:00"
         },
         {
             "name": "league/oauth2-client",
@@ -3143,16 +3214,16 @@
         },
         {
             "name": "pear/log",
-            "version": "1.14.4",
+            "version": "1.14.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pear/Log.git",
-                "reference": "f1ce70cfc8ee30af93c313f4e6444a7abe6aea03"
+                "reference": "38e6668ead984d446161acc1ba257cf77ec67bcd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pear/Log/zipball/f1ce70cfc8ee30af93c313f4e6444a7abe6aea03",
-                "reference": "f1ce70cfc8ee30af93c313f4e6444a7abe6aea03",
+                "url": "https://api.github.com/repos/pear/Log/zipball/38e6668ead984d446161acc1ba257cf77ec67bcd",
+                "reference": "38e6668ead984d446161acc1ba257cf77ec67bcd",
                 "shasum": ""
             },
             "require": {
@@ -3186,12 +3257,12 @@
                 {
                     "name": "Jon Parise",
                     "email": "jon@php.net",
-                    "homepage": "http://www.indelible.org",
+                    "homepage": "https://www.indelible.org/",
                     "role": "Developer"
                 }
             ],
             "description": "PEAR Logging Framework",
-            "homepage": "http://pear.github.io/Log/",
+            "homepage": "https://pear.github.io/Log/",
             "keywords": [
                 "log",
                 "logging"
@@ -3200,7 +3271,7 @@
                 "issues": "https://github.com/pear/Log/issues",
                 "source": "https://github.com/pear/Log"
             },
-            "time": "2024-02-20T21:00:10+00:00"
+            "time": "2025-03-09T21:15:38+00:00"
         },
         {
             "name": "pear/mail",
@@ -3602,96 +3673,6 @@
                 "source": "https://github.com/pear/Validate_Finance_CreditCard"
             },
             "time": "2021-05-19T22:03:15+00:00"
-        },
-        {
-            "name": "phenx/php-font-lib",
-            "version": "0.5.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dompdf/php-font-lib.git",
-                "reference": "a1681e9793040740a405ac5b189275059e2a9863"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dompdf/php-font-lib/zipball/a1681e9793040740a405ac5b189275059e2a9863",
-                "reference": "a1681e9793040740a405ac5b189275059e2a9863",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*"
-            },
-            "require-dev": {
-                "symfony/phpunit-bridge": "^3 || ^4 || ^5 || ^6"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "FontLib\\": "src/FontLib"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-2.1-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Ménager",
-                    "email": "fabien.menager@gmail.com"
-                }
-            ],
-            "description": "A library to read, parse, export and make subsets of different types of font files.",
-            "homepage": "https://github.com/PhenX/php-font-lib",
-            "support": {
-                "issues": "https://github.com/dompdf/php-font-lib/issues",
-                "source": "https://github.com/dompdf/php-font-lib/tree/0.5.6"
-            },
-            "time": "2024-01-29T14:45:26+00:00"
-        },
-        {
-            "name": "phenx/php-svg-lib",
-            "version": "0.5.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dompdf/php-svg-lib.git",
-                "reference": "46b25da81613a9cf43c83b2a8c2c1bdab27df691"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dompdf/php-svg-lib/zipball/46b25da81613a9cf43c83b2a8c2c1bdab27df691",
-                "reference": "46b25da81613a9cf43c83b2a8c2c1bdab27df691",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*",
-                "php": "^7.1 || ^8.0",
-                "sabberworm/php-css-parser": "^8.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Svg\\": "src/Svg"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-3.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Ménager",
-                    "email": "fabien.menager@gmail.com"
-                }
-            ],
-            "description": "A library to read, parse and export to PDF SVG files.",
-            "homepage": "https://github.com/PhenX/php-svg-lib",
-            "support": {
-                "issues": "https://github.com/dompdf/php-svg-lib/issues",
-                "source": "https://github.com/dompdf/php-svg-lib/tree/0.5.4"
-            },
-            "time": "2024-04-08T12:52:34+00:00"
         },
         {
             "name": "phpoffice/math",
@@ -6135,6 +6116,158 @@
             "time": "2024-09-09T11:45:10+00:00"
         },
         {
+            "name": "symfony/polyfill-php83",
+            "version": "v1.32.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php83.git",
+                "reference": "2fb86d65e2d424369ad2905e83b236a8805ba491"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php83/zipball/2fb86d65e2d424369ad2905e83b236a8805ba491",
+                "reference": "2fb86d65e2d424369ad2905e83b236a8805ba491",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php83\\": ""
+                },
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 8.3+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php83/tree/v1.32.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-09T11:45:10+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php84",
+            "version": "v1.32.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php84.git",
+                "reference": "000df7860439609837bbe28670b0be15783b7fbf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php84/zipball/000df7860439609837bbe28670b0be15783b7fbf",
+                "reference": "000df7860439609837bbe28670b0be15783b7fbf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php84\\": ""
+                },
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 8.4+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php84/tree/v1.32.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2025-02-20T12:04:08+00:00"
+        },
+        {
             "name": "symfony/process",
             "version": "v7.3.0",
             "source": {
@@ -6724,26 +6857,25 @@
         },
         {
             "name": "typo3/phar-stream-wrapper",
-            "version": "v3.1.8",
+            "version": "v4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/phar-stream-wrapper.git",
-                "reference": "a931b28f422a60052db85c0a84a05a366453b2c0"
+                "reference": "ce4b6e9873d4dd7dce2a397511713bf14977fdf2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/phar-stream-wrapper/zipball/a931b28f422a60052db85c0a84a05a366453b2c0",
-                "reference": "a931b28f422a60052db85c0a84a05a366453b2c0",
+                "url": "https://api.github.com/repos/TYPO3/phar-stream-wrapper/zipball/ce4b6e9873d4dd7dce2a397511713bf14977fdf2",
+                "reference": "ce4b6e9873d4dd7dce2a397511713bf14977fdf2",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "php": "^7.0 || ~8.0 || ~8.1 || ~8.2 || ~8.3"
+                "php": "^7.1 || ^8.0"
             },
             "require-dev": {
                 "ext-xdebug": "*",
-                "phpspec/prophecy": "^1.10",
-                "symfony/phpunit-bridge": "^5.1"
+                "phpunit/phpunit": "^7 || ^8 || ^9"
             },
             "suggest": {
                 "ext-fileinfo": "For PHP builtin file type guessing, otherwise uses internal processing"
@@ -6751,7 +6883,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "v3.x-dev"
+                    "dev-master": "4.x-dev"
                 }
             },
             "autoload": {
@@ -6773,9 +6905,9 @@
             ],
             "support": {
                 "issues": "https://github.com/TYPO3/phar-stream-wrapper/issues",
-                "source": "https://github.com/TYPO3/phar-stream-wrapper/tree/v3.1.8"
+                "source": "https://github.com/TYPO3/phar-stream-wrapper/tree/v4.0.0"
             },
-            "time": "2024-12-09T23:06:33+00:00"
+            "time": "2024-12-10T00:00:25+00:00"
         },
         {
             "name": "wpackagist-plugin/civicrm-admin-utilities",
