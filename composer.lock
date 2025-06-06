@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b4f68d8a0d8ea7bcf9b2fe8dea7628e1",
+    "content-hash": "fdf9cff804f05d504d6276affb22a220",
     "packages": [
         {
             "name": "adrienrn/php-mimetyper",
@@ -6990,6 +6990,42 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/civicrm-admin-utilities/"
+        },
+        {
+            "name": "wpackagist-plugin/civicrm-wp-member-sync",
+            "version": "0.6.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/civicrm-wp-member-sync/",
+                "reference": "tags/0.6.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/civicrm-wp-member-sync.0.6.3.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/civicrm-wp-member-sync/"
+        },
+        {
+            "name": "wpackagist-plugin/civicrm-wp-profile-sync",
+            "version": "0.6.9",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/civicrm-wp-profile-sync/",
+                "reference": "tags/0.6.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/civicrm-wp-profile-sync.0.6.9.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/civicrm-wp-profile-sync/"
         },
         {
             "name": "xkerman/restricted-unserialize",

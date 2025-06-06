@@ -31,7 +31,9 @@
         "civicrm/civicrm-core": "6.3.*",
         "civicrm/civicrm-packages": "6.3.*",
         "symfony/dotenv": "^7.3",
-        "civicrm/cli-tools": "^2025.05"
+        "civicrm/cli-tools": "^2025.05",
+        "wpackagist-plugin/civicrm-wp-member-sync": "^0.6.3",
+        "wpackagist-plugin/civicrm-wp-profile-sync": "^0.6.9"
     },
     "config": {
         "optimize-autoloader": true,
