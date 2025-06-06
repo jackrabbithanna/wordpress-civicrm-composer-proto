@@ -1,0 +1,6 @@
+Composer Wordpress/CiviCRM prototype
+
+If Installing Wordpress fresh, remove the ./web/wp-config.php after login so that ./wp-config.php takes over
+
+Create a .env file with all the necessary environmental variables
+
