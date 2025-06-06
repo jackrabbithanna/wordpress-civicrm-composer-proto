@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "490d37873e24103a30fa225607936776",
+    "content-hash": "f28841525601c4ed6d7358b995a0cb32",
     "packages": [
         {
             "name": "adrienrn/php-mimetyper",
@@ -840,6 +840,28 @@
                 "issues": "https://github.com/Skvare/civicrm-extension-plugin/issues"
             },
             "time": "2025-04-25T07:25:30+00:00"
+        },
+        {
+            "name": "civicrm/civicrm-packages",
+            "version": "5.81.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/civicrm/civicrm-packages.git",
+                "reference": "cc16b150804725da46431b1001bb02bc461a714f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/civicrm/civicrm-packages/zipball/cc16b150804725da46431b1001bb02bc461a714f",
+                "reference": "cc16b150804725da46431b1001bb02bc461a714f",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Legacy third party dependencies for CiviCRM",
+            "support": {
+                "source": "https://github.com/civicrm/civicrm-packages/tree/5.81.2"
+            },
+            "time": "2024-09-19T13:11:56+00:00"
         },
         {
             "name": "civicrm/civicrm-wordpress",
