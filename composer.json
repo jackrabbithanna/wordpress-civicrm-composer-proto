@@ -30,7 +30,8 @@
         "civicrm/civicrm-extension-plugin": "dev-master",
         "civicrm/civicrm-core": "6.3.*",
         "civicrm/civicrm-packages": "6.3.*",
-        "symfony/dotenv": "^7.3"
+        "symfony/dotenv": "^7.3",
+        "civicrm/cli-tools": "^2025.05"
     },
     "config": {
         "optimize-autoloader": true,
