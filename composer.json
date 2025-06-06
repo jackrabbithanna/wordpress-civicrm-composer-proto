@@ -71,6 +71,18 @@
                 },
                 "org.civicrm.ses": {
                     "url": "https://lab.civicrm.org/extensions/ses/-/archive/1.3.5/ses-1.3.5.zip"
+                },
+                "org.civicrm.contactlayout": {
+                    "url": "https://github.com/civicrm/org.civicrm.contactlayout/archive/2.4.0.zip"
+                },
+                "formprotection": {
+                    "url": "https://lab.civicrm.org/extensions/formprotection/-/archive/1.6.3/formprotection-1.6.3.zip"
+                },
+                "com.skvare.mosaicomigration": {
+                    "url": "https://github.com/Skvare/com.skvare.mosaicomigration/archive/1.4.zip"
+                },
+                "firewall": {
+                    "url": "https://lab.civicrm.org/extensions/firewall/-/archive/1.5.10/firewall-1.5.10.zip"
                 }
             }
         },
