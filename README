@@ -1,6 +1,31 @@
-Composer Wordpress/CiviCRM prototype
+# Composer Wordpress/CiviCRM prototype
 
-If Installing Wordpress fresh, remove the ./web/wp-config.php after login so that ./wp-config.php takes over
+# Fresh Install
 
-Create a .env file with all the necessary environmental variables
+clone this repo
+cd [repo]
+composer install
+
+copy ./wp-config.php to wp-config.bak
+copy ./web/wp-content/uploads/civicrm/civicrm.settings.php to civicrm.settings.bak
+
+Create a .env file with all the necessary environmental variables, .env-example provided
+
+Install Wordpress as normal
+
+copy ./wp-config.bak to ./wp-config.php
+
+Remove ./web/wp-config.php after login so that ./wp-config.php takes over
+
+Install CiviCRM as normal
+
+copy ./web/wp-content/uploads/civicrm/civicrm.settings.bak to civicrm.settings.php
+
+Now both wp-config.php and civicrm.settings.php are the originals from this repo, using the environmental variables in the .env
+
+
+
+
+
+
 
