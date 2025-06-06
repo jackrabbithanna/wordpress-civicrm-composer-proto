@@ -1,5 +1,8 @@
 # Composer Wordpress/CiviCRM prototype
 
+When this PR is merged: https://github.com/civicrm/civicrm-wordpress/pull/347
+We can remove the dependency on my fork of civicrm-wordpress in this repo.
+
 # Fresh Install
 
 clone this repo
@@ -22,10 +25,4 @@ Install CiviCRM as normal
 copy ./web/wp-content/uploads/civicrm/civicrm.settings.bak to civicrm.settings.php
 
 Now both wp-config.php and civicrm.settings.php are the originals from this repo, using the environmental variables in the .env
-
-
-
-
-
-
 
