@@ -35,9 +35,9 @@
 /web/wp-content/uploads/civicrm/ext/*
 !/web/wp-content/uploads/civicrm/ext/custom/
 !/web/wp-content/uploads/civicrm/ext/custom/**
+!/web/wp-content/uploads/civicrm/civicrm.settings.php
 
 # Ignore the civicrm settings file
-/web/wp-content/uploads/civicrm/civicrm.settings.php
 /web/wp-content/plugins/google-site-kit/dist/assets
 
 # Cache
