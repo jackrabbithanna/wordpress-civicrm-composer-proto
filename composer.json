@@ -57,7 +57,7 @@
         },
         "civicrm": {
             "cms_type": "WordPress",
-            "extensions_install_path": "./web/wp-content/uploads/civicrm/ext/contrib/",
+            "extensions_install_path": "./web/wp-content/civicrm-ext/contrib/",
             "extensions": {
                 "uk.co.vedaconsulting.mosaico": {
                     "url": "https://download.civicrm.org/extension/uk.co.vedaconsulting.mosaico/3.6.1725615009/uk.co.vedaconsulting.mosaico-3.6.1725615009.zip"

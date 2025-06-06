@@ -582,11 +582,11 @@ $civicrm_setting['Directory Preferences']['imageUploadDir'] = $repo_root . '/wp-
 $civicrm_setting['Directory Preferences']['customFileUploadDir'] = $repo_root . '/wp-content/uploads/civicrm/custom/';
 $civicrm_setting['Directory Preferences']['customTemplateDir'] = '';
 $civicrm_setting['Directory Preferences']['customPHPPathDir'] = '';
-$civicrm_setting['Directory Preferences']['extensionsDir'] = $repo_root . '/wp-content/uploads/civicrm/ext/';
+$civicrm_setting['Directory Preferences']['extensionsDir'] = $repo_root . '/wp-content/civicrm-ext/';
 $civicrm_setting['URL Preferences']['userFrameworkResourceURL'] =  $site_uri . '/wp-content/plugins/contrib/civicrm/civicrm/';
 $civicrm_setting['URL Preferences']['imageUploadURL'] =  $site_uri . '/wp-content/uploads/civicrm/persist/contribute/';
 //$civicrm_setting['URL Preferences']['customCSSURL'] = '';
-$civicrm_setting['URL Preferences']['extensionsURL'] =  $site_uri . '/wp-content/uploads/civicrm/ext/';
+$civicrm_setting['URL Preferences']['extensionsURL'] =  $site_uri . '/wp-content/civicrm-ext/';
 //$civicrm_setting['Extension Preferences']['ext_repo_url'] = false;
 
 $civicrm_setting['domain']['environment'] = getenv('CIVICRM_ENVIRONMENT');

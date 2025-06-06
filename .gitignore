@@ -8,6 +8,12 @@
 !/web/wp-content/
 /web/wp-content/*
 
+# UnIgnore CiviCRM custom extensions
+!/web/wp-content/civicrm-ext/
+/web/wp-content/civicrm-ext/contrib/
+!/web/wp-content/civicrm-ext/custom/
+!/web/wp-content/civicrm-ext/custom/**
+
 !/web/wp-content/themes/
 /web/wp-content/themes/*
 !/web/wp-content/themes/custom/
@@ -31,10 +37,6 @@
 /web/wp-content/uploads/*
 !/web/wp-content/uploads/civicrm/
 /web/wp-content/uploads/civicrm/*
-!/web/wp-content/uploads/civicrm/ext/
-/web/wp-content/uploads/civicrm/ext/*
-!/web/wp-content/uploads/civicrm/ext/custom/
-!/web/wp-content/uploads/civicrm/ext/custom/**
 !/web/wp-content/uploads/civicrm/civicrm.settings.php
 
 # Ignore the civicrm settings file
