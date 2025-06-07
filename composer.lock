@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eadad817c7ddfa1e84103fbaba7d8c21",
+    "content-hash": "d242d3d5a98ef2da8463330928d196b9",
     "packages": [
         {
             "name": "adrienrn/php-mimetyper",
@@ -228,6 +228,46 @@
                 }
             ],
             "time": "2025-03-05T13:00:01+00:00"
+        },
+        {
+            "name": "civicrm/civicrm-asset-plugin",
+            "version": "v1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/civicrm/civicrm-asset-plugin.git",
+                "reference": "88c7dd0c93b6b5a4453a63e523706c941086763b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/civicrm/civicrm-asset-plugin/zipball/88c7dd0c93b6b5a4453a63e523706c941086763b",
+                "reference": "88c7dd0c93b6b5a4453a63e523706c941086763b",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1 || ^2.0"
+            },
+            "require-dev": {
+                "symfony/process": "^2.7 || ^3.0 || ^4.0",
+                "totten/process-helper": "^1.0.1"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Civi\\AssetPlugin\\AssetPlugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Civi\\AssetPlugin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "description": "Publish assets from private CiviCRM folders to a public folder",
+            "support": {
+                "source": "https://github.com/civicrm/civicrm-asset-plugin/tree/v1.1.4"
+            },
+            "time": "2023-11-07T02:08:39+00:00"
         },
         {
             "name": "civicrm/civicrm-core",
