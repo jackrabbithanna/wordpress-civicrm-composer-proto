@@ -17,7 +17,7 @@
         {
             "type": "vcs",
             "name": "civicrm/civicrm-wordpress",
-            "url": "https://github.com/jackrabbithanna/civicrm-wordpress.git"
+            "url": "https://github.com/civicrm/civicrm-wordpress.git"
         }
     ],
     "require": {
@@ -25,7 +25,7 @@
         "composer/installers": "^2.2",
         "oscarotero/env": "^2.1",
         "johnpbloch/wordpress": "^6.8",
-        "civicrm/civicrm-wordpress": "dev-composer-json",
+        "civicrm/civicrm-wordpress": "dev-master",
         "wpackagist-plugin/civicrm-admin-utilities": "^1.0",
         "civicrm/civicrm-extension-plugin": "dev-master",
         "civicrm/civicrm-core": "6.3.*",
@@ -57,6 +57,14 @@
             "web/wp-content/plugins/contrib/{$name}/": ["type:wordpress-plugin"],
             "web/wp-content/themes/contrib/{$name}/": ["type:wordpress-theme"],
             "web/wp-content/uploads/civicrm/ext/{$name}/": ["type:civicrm-extension"]
+        },
+        "patches": {
+            "civicrm/civicrm-core": {
+                "WIP composer support": "https://patch-diff.githubusercontent.com/raw/civicrm/civicrm-core/pull/32945.patch"
+            },
+            "civicrm/civicrm-wordpress": {
+                "WIP composer support": "https://patch-diff.githubusercontent.com/raw/civicrm/civicrm-wordpress/pull/348.patch"
+            }
         },
         "civicrm": {
             "cms_type": "WordPress",

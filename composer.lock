@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fdf9cff804f05d504d6276affb22a220",
+    "content-hash": "eadad817c7ddfa1e84103fbaba7d8c21",
     "packages": [
         {
             "name": "adrienrn/php-mimetyper",
@@ -836,22 +836,23 @@
         },
         {
             "name": "civicrm/civicrm-wordpress",
-            "version": "dev-composer-json",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jackrabbithanna/civicrm-wordpress.git",
-                "reference": "b0d8d267e4656554b11267187c209da2d089d338"
+                "url": "https://github.com/civicrm/civicrm-wordpress.git",
+                "reference": "66f1bb8ce7adb92fa3c67a86f3309c91b91093b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jackrabbithanna/civicrm-wordpress/zipball/b0d8d267e4656554b11267187c209da2d089d338",
-                "reference": "b0d8d267e4656554b11267187c209da2d089d338",
+                "url": "https://api.github.com/repos/civicrm/civicrm-wordpress/zipball/66f1bb8ce7adb92fa3c67a86f3309c91b91093b6",
+                "reference": "66f1bb8ce7adb92fa3c67a86f3309c91b91093b6",
                 "shasum": ""
             },
             "require": {
                 "civicrm/civicrm-core": ">=5.21.0 || dev-master",
                 "composer/installers": "^1 || ^2"
             },
+            "default-branch": true,
             "type": "wordpress-plugin",
             "extra": {
                 "installer-name": "civicrm"
@@ -883,7 +884,7 @@
             ],
             "description": "Open source constituent relationship management for non-profits, NGOs and advocacy organizations.",
             "support": {
-                "source": "https://github.com/jackrabbithanna/civicrm-wordpress/tree/composer-json"
+                "source": "https://github.com/civicrm/civicrm-wordpress/tree/master"
             },
             "funding": [
                 {
@@ -891,7 +892,7 @@
                     "url": "https://civicrm.org/civicrm/contribute/transact?reset=1&id=47"
                 }
             ],
-            "time": "2025-06-06T16:36:02+00:00"
+            "time": "2025-06-07T02:59:11+00:00"
         },
         {
             "name": "civicrm/cli-tools",
